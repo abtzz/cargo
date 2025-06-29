@@ -106,6 +106,13 @@ pub(super) fn download(
         None
     };
 
+    println!(
+        "Downloading `{}` from `{}`",
+        pkg,
+        url
+    );
+    println!("authorization: {:?}", authorization);
+
     Ok(MaybeLock::Download {
         url,
         descriptor: pkg.to_string(),
